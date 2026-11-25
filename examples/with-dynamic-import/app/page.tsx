@@ -3,6 +3,7 @@
 "use client"; // Required for client-side rendering
 
 import { useState } from "react";
+import type { FuseResult } from "fuse.js";
 import Header from "./_components/Header"; // Adjust the path based on your directory structure
 import dynamic from "next/dynamic";
 
@@ -27,7 +28,7 @@ const names = ["Tim", "Joe", "Bel", "Max", "Lee"];
 export default function IndexPage() {
   const [showMore, setShowMore] = useState(false);
   const [falsyField] = useState(false);
-  const [results, setResults] = useState();
+  const [results, setResults] = useState<FuseResult<string>[]>();
 
   return (
     <div>
