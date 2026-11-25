@@ -6,6 +6,14 @@ module.exports = {
     locales,
     defaultLocale: sourceLocale,
   },
+  turbopack: {
+    rules: {
+      "*.po": {
+        loaders: ["@lingui/loader"],
+        as: "*.js",
+      },
+    },
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.po/,
