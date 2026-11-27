@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Inter } from "next/font/google";
 import Header from "@/components/header";
 import Analytics from "@/components/analytics";
@@ -15,7 +16,9 @@ export default function RootLayout({
         <Header />
         {children}
       </body>
-      <Analytics />
+      <Suspense>
+        <Analytics />
+      </Suspense>
     </html>
   );
 }
