@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@lingui/react": "^3.17.1",
+    "make-plural": "^6.2.2",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
